@@ -1,8 +1,12 @@
 # Towards Addressing Label Ambiguity in Sequential Emotional Responses Through Distribution Learning
 
-<div style="display: flex; justify-content: center;">
-    <img src="graphical_abstract_v3.jpg" alt="alt text" width="450" height="350">
-</div>
+[//]: # (<div style="display: flex; justify-content: center;">)
+
+[//]: # (    <img src="graphical_abstract_v3.jpg" alt="alt text" width="450" height="350">)
+
+[//]: # (</div>)
+
+![graph_abstract](graphical_abstract_v3.jpg)
 
 This work highlights the challenge of labelling data with single-label categories, as there may be ambiguity in the assigned labels. 
 This ambiguity arises when a data sample, which can be influenced by previous affective events is labelled with a single-label category (known as priming).
