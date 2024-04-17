@@ -66,29 +66,12 @@ def train_test_session(subject, learn_type, network, sess_ids, dataset, config):
         # Instantiate the network architecture to train
         if network == "MLP":
             net = MLP(n_classes=n_classes)
-        elif network == "CNN":
-            net =CNN(n_classes=n_classes)
-        elif network == "DGCNN":
-            # sensor_locs = np.asarray(SENSOR_LOCS)*100
-            # edge_index, edge_weight = get_edge_weight_from_electrode(sensor_locs)
-            # net = DGCNN(device=device,
-            #             num_nodes=62,
-            #             edge_weight=edge_weight,
-            #             edge_index=edge_index,
-            #             num_features=5,
-            #             num_hiddens=64,
-            #             num_layers=20,
-            #             num_classes=n_classes)
-            net = DGCNN(in_channels=5, num_electrodes=62, out_channels=64,
-                        k_adj=10, num_classes=n_classes)
-        elif network == "DBN":
-            net = DBN(n_classes=n_classes)
+        
         else:
             raise NotImplementedError
 
         # Instantiate the type of training: single label or label distribution
         model = SLL(net, n_classes, config) if not is_le else LDL(net, n_classes, config)
-        # model = LDL(net, n_classes, config) if not is_le else LDL(net, n_classes, config)
 
         # Create callbacks
         cb_lr_monitor = LearningRateMonitor(logging_interval="step")

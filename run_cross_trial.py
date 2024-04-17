@@ -27,7 +27,6 @@ def main():
     dataset = "SEED5"
 
     # config = {"lr": 0.0028, "weight_decay": 0.018, "bs": 1024} # SEED
-    # config = {"lr": 0.00009558, "weight_decay": 0.0001765, "bs": 2056} # SEED5
     config = {"lr": 0.0012, "weight_decay": 2.58e-5, "bs": 1024} # SEED5
 
     for subject in subject_list:
