@@ -1,7 +1,7 @@
 # Towards Addressing Label Ambiguity in Sequential Emotional Responses Through Distribution Learning
 
 <div style="display: flex; justify-content: center;">
-    <img src="graphical_abstract_v3.png" alt="alt text" width="450" height="350">
+    <img src="graphical_abstract_v3.jpg" alt="alt text" width="450" height="350">
 </div>
 
 This work highlights the challenge of labelling data with single-label categories, as there may be ambiguity in the assigned labels. 
