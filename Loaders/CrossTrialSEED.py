@@ -120,17 +120,13 @@ class CrossTrialLoader:
         if self.is_le and not self.img_fmt:
             le = LEVI()
             #------------------------------------#
-            # Cheating option
             n_train = x_train.shape[0]
             X = np.concatenate([x_train, x_test], axis=0)
             y = np.concatenate([y_train_hot, y_test_hot], axis=0)
-            y_dist = le.fit_transform(X, y, lr=0.001, epochs=1000)
+            y_dist = le.fit_transform(X, y, lr=0.001, epochs=5000)
             y_dist_train = y_dist[:n_train]
             y_dist_test = y_dist[n_train:]
             # ------------------------------------#
-            # y_dist_train = le.fit_transform(x_train, y_train_hot, lr=0.001, epochs=5000)
-            # # y_dist_test = le.fit_transform(x_test, y_test_hot, lr=0.001, epochs=5000)
-            # y_dist_test = le.transform(x_test, y_test_hot)
             y_train = y_dist_train
             y_test = y_dist_test
 

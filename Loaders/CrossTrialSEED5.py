@@ -50,8 +50,7 @@ class CrossTrialLoader:
             offset = 30
         else:
             offset = 0
-        # train_id = idx[0:9]
-        # test_id = idx[9:]
+            
         train_id = idx[0:10]
         test_id = idx[10:]
         x_train = list()
@@ -106,8 +105,7 @@ class CrossTrialLoader:
             y_dist_train = y_dist[:n_train]
             y_dist_test = y_dist[n_train:]
             # ------------------------------------#
-            # y_dist_train = le.fit_transform(x_train, y_train_hot, lr=0.001, epochs=5000)
-            # y_dist_test = le.transform(x_test, y_test_hot)
+            
             y_train = y_dist_train
             y_test = y_dist_test
             ###################################
@@ -153,9 +151,3 @@ class CrossTrialLoader:
         x_train_ds = CreatePyTorchDataset(data=x_train, labels=y_train, logic_gt=y_train_hot)
         x_test_ds = CreatePyTorchDataset(data=x_test, labels=y_test, logic_gt=y_test_hot)
         return x_train_ds, x_test_ds
-
-
-if __name__ == '__main__':
-    loader = CrossTrialLoader(img_fmt=False, is_le=False)
-    train, test = loader.get_experiment_sets(1,3)
-    print("STOP")
