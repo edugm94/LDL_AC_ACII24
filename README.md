@@ -41,5 +41,14 @@ python get_results.py
 Please, if you use the code provided and found relevant the work presented in this paper, cite the following reference in your work: 
 
 ```
-
+@INPROCEEDINGS{10970302,
+  author={Maestro, Eduardo Gutierrez and Banaee, Hadi and Loutfi, Amy},
+  booktitle={2024 12th International Conference on Affective Computing and Intelligent Interaction (ACII)}, 
+  title={Towards Addressing Label Ambiguity in Sequential Emotional Responses Through Distribution Learning}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={355-361},
+  keywords={Training;Affective computing;Computational modeling;Predictive models;Benchmark testing;Data models;Emotional responses;Labeling;Affective computing;label distribution learning;label enhancement},
+  doi={10.1109/ACII63134.2024.00045}}
 ```
